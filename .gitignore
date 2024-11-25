@@ -1,0 +1,12 @@
+**/*oneoff.test.ts
+**/*oneoff.test.mts
+node_modules
+.env.*
+notes.txt
+*.old?
+*.old
+*.bak?
+tmp
+one-off.test.ts
+one-off.test.mts
+.DS_Store

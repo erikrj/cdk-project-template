@@ -1,0 +1,30 @@
+{
+  "name": "lib",
+  "type": "module",
+  "scripts": {
+    "prebuild": "prettier --check . && eslint .",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "vitest run --coverage",
+    "clean": "find ./src -type f \\( -name \"*.mjs\" -o -name \"*.d.mts\" -o -name \"*.map\" \\) -exec rm -f {} \\;",
+    "fmt": "prettier --write ."
+  },
+  "dependencies": {
+    "@nr1e/logging": "1.4.1",
+    "uuid": "^11.0.3",
+    "valibot": "^0.42.1"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.699.0",
+    "@aws-sdk/lib-dynamodb": "^3.699.0",
+    "@aws-sdk/util-dynamodb": "^3.699.0",
+    "@types/node": "22.9.3",
+    "@types/uuid": "^10.0.0",
+    "typescript": "~5.6.3",
+    "eslint": "^9.15.0",
+    "typescript-eslint": "^8.15.0",
+    "prettier": "^3.3.3",
+    "@vitest/coverage-v8": "^1.6.0",
+    "vitest": "^1.6.0"
+  }
+}

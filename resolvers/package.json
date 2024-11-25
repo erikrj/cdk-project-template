@@ -1,0 +1,33 @@
+{
+  "name": "resolvers",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "prebuild": "prettier --check . && eslint .",
+    "build": "pnpx esbuild --tree-shaking=true --bundle --sources-content=false --target=esnext --platform=node --format=esm --external:@aws-appsync/utils --outdir=dist src/**/*.mts",
+    "watch": "pnpx esbuild --tree-shaking=true --watch --bundle --sources-content=false --target=esnext --platform=node --format=esm --external:@aws-appsync/utils --outdir=dist src/**/*.mts",
+    "test": "vitest run --coverage",
+    "clean": "rm -rf dist",
+    "posttest": "npm run lint",
+    "fmt": "prettier --write ."
+  },
+  "devDependencies": {
+    "@aws-appsync/eslint-plugin": "^1.10.1",
+    "@aws-appsync/utils": "^1.11.0",
+    "@aws-sdk/client-appsync": "^3.699.0",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "~8.57.1",
+    "@typescript-eslint/typescript-estree": "^8.15.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "add": "^2.0.6",
+    "esbuild": "^0.24.0",
+    "eslint": "~8.57.1",
+    "globals": "^15.12.0",
+    "typescript": "~5.3.3",
+    "typescript-eslint": "^7.18.0",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "valibot": "^0.35.0"
+  }
+}

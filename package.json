@@ -1,0 +1,43 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "install-client": "cd client && pnpm i --frozen-lockfile",
+    "install-lib": "cd lib && pnpm i --frozen-lockfile",
+    "install-resolvers": "cd resolvers && pnpm i --frozen-lockfile",
+    "install-handlers": "cd handlers && pnpm i --frozen-lockfile",
+    "install-app": "cd app && pnpm i --frozen-lockfile",
+    "install-cdk": "cd cdk && pnpm i --frozen-lockfile",
+    "install-all": "concurrently \"pnpm:install-client\" \"pnpm:install-lib\" \"pnpm:install-resolvers\" \"pnpm:install-handlers\" \"pnpm:install-app\" \"pnpm:install-cdk\" -c auto",
+    "postinstall": "pnpm run install-all",
+    "build-client": "cd client && pnpm run build",
+    "build-lib": "cd lib && pnpm run build",
+    "build-resolvers": "cd resolvers && pnpm run build",
+    "build-handlers": "cd handlers && pnpm run build",
+    "build-app": "cd app && pnpm run build",
+    "build-cdk": "cd cdk && pnpm run build",
+    "build": "concurrently \"pnpm:build-client\" -c auto && concurrently \"pnpm:build-lib\" -c auto && concurrently \"pnpm:build-resolvers\" \"pnpm:build-handlers\" \"pnpm:build-app\" \"pnpm:build-cdk\" -c auto",
+    "fmt-client": "cd client && pnpm run fmt",
+    "fmt-lib": "cd lib && pnpm run fmt",
+    "fmt-resolvers": "cd resolvers && pnpm run fmt",
+    "fmt-handlers": "cd handlers && pnpm run fmt",
+    "fmt-app": "cd app && pnpm run fmt",
+    "fmt-cdk": "cd cdk && pnpm run fmt",
+    "fmt": "concurrently \"pnpm:fmt-client\" \"pnpm:fmt-lib\" \"pnpm:fmt-resolvers\" \"pnpm:fmt-handlers\" \"pnpm:fmt-app\" \"pnpm:fmt-cdk\" -c auto",
+    "watch-client": "cd client && pnpm run watch",
+    "watch-lib": "cd lib && pnpm run watch",
+    "watch-resolvers": "cd resolvers && pnpm run watch",
+    "watch-handlers": "cd handlers && pnpm run watch",
+    "watch-app": "cd app && pnpm run dev",
+    "watch-cdk": "cd cdk && pnpm run watch",
+    "watch": "concurrently \"pnpm:watch-client\" \"pnpm:watch-lib\" \"pnpm:watch-resolvers\" \"pnpm:watch-handlers\" \"pnpm:watch-app\" \"pnpm:watch-cdk\" -c auto",
+    "ecr-login": "./scripts/ecr-login.sh",
+    "cdk-deploy": "./scripts/cdk-deploy.sh",
+    "cdk-diff": "./scripts/cdk-deploy.sh diff"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "marked": "^15.0.2"
+  }
+}

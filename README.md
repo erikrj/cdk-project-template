@@ -6,8 +6,6 @@ want when you create a project.
 
 ## Structure
 
-
-
 **.idea**
 
 Contains IntelliJ IDEA configuration files. There is a .gitignore that IntelliJ creates for you in this
@@ -68,5 +66,25 @@ Contains the client code that is used to interact with the backend.
 **scripts**
 
 Contains helper shell scripts.
+
+**app**
+
+Contains a modified template for a Qwik application. This was generated with the following command
+
+```bash
+mkdir app
+cd app
+pnpm create qwik@latest
+```
+
+The following modifications were done after project generation:
+
+ - tailwindcss was added
+ - trailing / were ignored
+ - updated eslint and prettier configs
+ - base classes used on many projects were added
+ - serverless adapter was added
+ - scripts in package.json were updated
+ - tsconfig.json was modified
 
 

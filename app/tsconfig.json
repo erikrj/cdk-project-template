@@ -18,7 +18,8 @@
     "noEmit": true,
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+    "preserveWatchOutput": true
   },
   "include": ["src", "./*.d.ts", "./*.config.ts"]
 }

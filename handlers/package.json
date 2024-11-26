@@ -6,7 +6,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "vitest run --coverage",
-    "clean": "find ./src -type f \\( -name \"*.mjs\" -o -name \"*.d.mts\" -o -name \"*.map\" \\) -exec rm -f {} \\;",
+    "clean": "find ./src -type f \\( -name \"*.mjs\" -o -name \"*.js\" -o -name \"*.d.mts\" -o -name \"*.map\" \\) -exec rm -f {} \\;",
     "fmt": "prettier --write ."
   },
   "dependencies": {

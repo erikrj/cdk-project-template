@@ -3,10 +3,26 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/app/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/app/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/app/server" />
+      <excludeFolder url="file://$MODULE_DIR$/app/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/cdk/cdk.out" />
       <excludeFolder url="file://$MODULE_DIR$/cdk/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/client/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/client/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/handlers/coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/handlers/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/resolvers/dist" />
       <excludeFolder url="file://$MODULE_DIR$/resolvers/node_modules" />
+      <excludePattern pattern="*.d.*" />
+      <excludePattern pattern="*.js" />
+      <excludePattern pattern="*.map" />
+      <excludePattern pattern="**src/*.mjs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

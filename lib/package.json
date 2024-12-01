@@ -5,7 +5,8 @@
     "prebuild": "prettier --check . && eslint .",
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "vitest run --coverage",
+    "test": "vitest run --coverage -c vitest.unit.mts",
+    "integration": "vitest run -c vitest.integration.mts",
     "clean": "find ./src -type f \\( -name \"*.mjs\" -o -name \"*.d.mts\" -o -name \"*.map\" \\) -exec rm -f {} \\;",
     "fmt": "prettier --write ."
   },

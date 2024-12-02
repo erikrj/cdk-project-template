@@ -4,6 +4,7 @@
   "scripts": {
     "prebuild": "prettier --check . && eslint .",
     "build": "tsc",
+    "postbuild": "cp package.json dist/ && pnpm run test",
     "watch": "tsc -w",
     "test": "vitest run --coverage -c vitest.unit.mts",
     "integration": "vitest run -c vitest.integration.mts",
@@ -22,9 +23,9 @@
     "@types/node": "22.9.3",
     "@types/uuid": "^10.0.0",
     "typescript": "~5.6.3",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "typescript-eslint": "^8.15.0",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "@vitest/coverage-v8": "^1.6.0",
     "vitest": "^1.6.0"
   }

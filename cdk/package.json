@@ -8,6 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
+    "clean": "rm -rf cdk.out && find ./bin ./lib -type f \\( -name \"*.js\" -o -name \"*.d.*\" -o -name \"*.map\" \\) -exec rm -f {} \\;",
     "cdk": "cdk",
     "fmt": "prettier --write ."
   },

@@ -1,0 +1,23 @@
+{
+  "name": "playground",
+  "type": "module",
+  "scripts": {
+    "prebuild": "prettier --check . && eslint .",
+    "build": "tsc",
+    "postbuild": "cp package.json dist/ && pnpm run test",
+    "watch": "tsc -w",
+    "test": "vitest run",
+    "integration": "vitest run -c vitest.integration.mts",
+    "clean": "rm -rf coverage dist",
+    "fmt": "prettier --write ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "22.9.3",
+    "typescript": "~5.6.3",
+    "eslint": "^9.16.0",
+    "typescript-eslint": "^8.15.0",
+    "prettier": "^3.4.1",
+    "vitest": "^1.6.0"
+  }
+}

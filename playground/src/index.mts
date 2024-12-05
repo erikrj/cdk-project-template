@@ -1,3 +1,3 @@
-export function replaceMe() {
-  console.log('Replace me!');
+export function doNothing() {
+  console.log('Nothing to do');
 }

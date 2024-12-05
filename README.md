@@ -88,3 +88,15 @@ The following modifications were done after project generation:
  - tsconfig.json was modified
 
 
+## Quick Links
+
+ - [QwikDev Issues](https://github.com/QwikDev/qwik/issues)
+ - [Iconify](https://icon-sets.iconify.design/)
+ - [Lucia](https://lucia-auth.com/)
+ - [Resolver $util](https://docs.aws.amazon.com/appsync/latest/devguide/utility-helpers-in-util.html)
+ - [JWT Decoding](https://jwt.io/)
+ - Qwik
+   - [useResource$](https://qwik.dev/tutorial/reactivity/resource/)
+   - Modular Forms
+     -[formAction$](https://modularforms.dev/qwik/api/formAction$)
+

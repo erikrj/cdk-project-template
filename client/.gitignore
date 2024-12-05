@@ -6,3 +6,4 @@ node_modules
 !prettier.config.mjs
 !eslint.config.mjs
 coverage
+dist

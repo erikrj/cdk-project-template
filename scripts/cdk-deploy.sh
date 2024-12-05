@@ -5,18 +5,26 @@ cd "$(dirname "${0}")/../cdk" || exit 1
 
 command=${1:-deploy}
 
+run() {
+  printf '#%.0s' {1..80}
+  printf "\ncdk $command $1\n"
+  printf '#%.0s' {1..80}
+  printf "\n"
+  run $1
+}
+
 # Global
-npx aws-cdk@2.x ${command} Platform/DataStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/GraphSupportStack --require-approval never
+run Platform/DataStack
+run Platform/GraphSupportStack
 
 # Regional
-npx aws-cdk@2.x ${command} Platform/ApiStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/GraphStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/FrontendStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/IngestStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/DiscoStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/NotificationStack --require-approval never
+run Platform/ApiStack
+run Platform/GraphStack
+run Platform/FrontendStack
+run Platform/IngestStack
+run Platform/DiscoStack
+run Platform/NotificationStack
 
 # Edge
-npx aws-cdk@2.x ${command} Platform/ApiEdgeStack --require-approval never
-npx aws-cdk@2.x ${command} Platform/FrontendEdgeStack --require-approval never
+run Platform/ApiEdgeStack
+run Platform/FrontendEdgeStack
